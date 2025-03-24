@@ -1,0 +1,236 @@
+03/24/2025 01:58:50 - WARNING - __main__ -   Process rank: 1, device: cpu, distributed training: True, 16-bits training: False
+03/24/2025 01:58:59 - INFO - pytorch_transformers.modeling_utils -   loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-config.json from cache at /users/yc6206/.cache/torch/pytorch_transformers/b945b69218e98b3e2c95acf911789741307dec43c698d35fad11c1ae28bda352.9da767be51e1327499df13488672789394e2ca38b877837e52618a67d7002391
+03/24/2025 01:58:59 - INFO - pytorch_transformers.modeling_utils -   Model config {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "finetuning_task": "rte",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pad_token_id": 0,
+  "pruned_heads": {},
+  "torchscript": false,
+  "type_vocab_size": 2,
+  "vocab_size": 28996
+}
+
+03/24/2025 01:58:59 - INFO - pytorch_transformers.tokenization_utils -   loading file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-vocab.txt from cache at /users/yc6206/.cache/torch/pytorch_transformers/5e8a2b4893d13790ed4150ca1906be5f7a03d6c4ddf62296c383f6db42814db2.e13dbb970cb325137104fb2e5f36fe865f27746c6b526f6352861b1980eb80b1
+03/24/2025 01:59:00 - INFO - pytorch_transformers.modeling_utils -   loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-cased-pytorch_model.bin from cache at /users/yc6206/.cache/torch/pytorch_transformers/35d8b9d36faaf46728a0192d82bf7d00137490cd6074e8500778afed552a67e5.3fadbea36527ae472139fe84cddaa65454d7429f12d543d80bfc3ad70de55ac2
+03/24/2025 01:59:09 - INFO - pytorch_transformers.modeling_utils -   Weights of BertForSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+03/24/2025 01:59:09 - INFO - pytorch_transformers.modeling_utils -   Weights from pretrained model not used in BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+03/24/2025 01:59:09 - INFO - __main__ -   Training/evaluation parameters Namespace(data_dir='/proj/cos568proj2-PG0/glue_data/RTE', model_type='bert', model_name_or_path='bert-base-cased', task_name='rte', output_dir='/tmp/RTE/', config_name='', tokenizer_name='', cache_dir='', max_seq_length=128, do_train=True, do_eval=True, do_lower_case=False, per_device_train_batch_size=16, per_device_eval_batch_size=8, gradient_accumulation_steps=1, learning_rate=2e-05, weight_decay=0.0, adam_epsilon=1e-08, max_grad_norm=1.0, num_train_epochs=1.0, max_steps=-1, warmup_steps=0, no_cuda=False, overwrite_output_dir=True, overwrite_cache=False, seed=42, fp16=False, fp16_opt_level='O1', local_rank=1, master_ip='128.105.144.114', master_port='12345', world_size=4, device=device(type='cpu'), n_gpu=0, output_mode='classification')
+03/24/2025 01:59:09 - INFO - __main__ -   Loading features from cached file /proj/cos568proj2-PG0/glue_data/RTE/cached_train_bert-base-cased_128_rte
+03/24/2025 01:59:11 - INFO - __main__ -   ***** Running training *****
+03/24/2025 01:59:11 - INFO - __main__ -     Num examples = 2490
+03/24/2025 01:59:11 - INFO - __main__ -     Num Epochs = 1
+03/24/2025 01:59:11 - INFO - __main__ -     Instantaneous batch size per device = 16
+03/24/2025 01:59:11 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 64
+03/24/2025 01:59:11 - INFO - __main__ -     Gradient Accumulation steps = 1
+03/24/2025 01:59:11 - INFO - __main__ -     Total optimization steps = 156
+03/24/2025 01:59:19 - INFO - __main__ -   Time: 8.305520439000247
+03/24/2025 01:59:28 - INFO - __main__ -   Time: 8.672506883001915
+03/24/2025 01:59:36 - INFO - __main__ -   Time: 8.016079721997812
+03/24/2025 01:59:44 - INFO - __main__ -   Time: 7.986199225997552
+03/24/2025 01:59:51 - INFO - __main__ -   Time: 6.955128601002798
+03/24/2025 01:59:57 - INFO - __main__ -   Time: 6.456493197998498
+03/24/2025 02:00:04 - INFO - __main__ -   Time: 7.238339242998336
+03/24/2025 02:00:11 - INFO - __main__ -   Time: 6.368663210996601
+03/24/2025 02:00:17 - INFO - __main__ -   Time: 6.375954617000389
+03/24/2025 02:00:23 - INFO - __main__ -   Time: 6.274203213000874
+03/24/2025 02:00:30 - INFO - __main__ -   Time: 6.413026823000109
+03/24/2025 02:00:36 - INFO - __main__ -   Time: 6.3704022689998965
+03/24/2025 02:00:44 - INFO - __main__ -   Time: 7.556474834997061
+03/24/2025 02:00:50 - INFO - __main__ -   Time: 6.8356185859993275
+03/24/2025 02:00:56 - INFO - __main__ -   Time: 6.0908052929989935
+03/24/2025 02:01:03 - INFO - __main__ -   Time: 6.3901080489995365
+03/24/2025 02:01:09 - INFO - __main__ -   Time: 6.59802866300015
+03/24/2025 02:01:16 - INFO - __main__ -   Time: 6.37284684000042
+03/24/2025 02:01:23 - INFO - __main__ -   Time: 6.8842733329984185
+03/24/2025 02:01:30 - INFO - __main__ -   Time: 7.503205795001122
+03/24/2025 02:01:37 - INFO - __main__ -   Time: 7.152645378999296
+03/24/2025 02:01:44 - INFO - __main__ -   Time: 6.311198508999951
+03/24/2025 02:01:50 - INFO - __main__ -   Time: 6.375282293000055
+03/24/2025 02:01:58 - INFO - __main__ -   Time: 7.5489092620009615
+03/24/2025 02:02:04 - INFO - __main__ -   Time: 6.678476346001844
+03/24/2025 02:02:11 - INFO - __main__ -   Time: 6.385449104000145
+03/24/2025 02:02:17 - INFO - __main__ -   Time: 6.551861212003132
+03/24/2025 02:02:24 - INFO - __main__ -   Time: 6.337020175997168
+03/24/2025 02:02:30 - INFO - __main__ -   Time: 6.294314554997982
+03/24/2025 02:02:37 - INFO - __main__ -   Time: 6.59999081800197
+03/24/2025 02:02:43 - INFO - __main__ -   Time: 6.497452631996566
+03/24/2025 02:02:49 - INFO - __main__ -   Time: 6.148584182999912
+03/24/2025 02:02:55 - INFO - __main__ -   Time: 6.0975566070010245
+03/24/2025 02:03:01 - INFO - __main__ -   Time: 6.165204363001976
+03/24/2025 02:03:08 - INFO - __main__ -   Time: 6.222853801999008
+03/24/2025 02:03:14 - INFO - __main__ -   Time: 6.25073292000161
+03/24/2025 02:03:20 - INFO - __main__ -   Time: 6.453089986000123
+03/24/2025 02:03:26 - INFO - __main__ -   Time: 6.07639784300045
+03/24/2025 02:03:33 - INFO - __main__ -   Time: 6.084195576997445
+03/24/2025 02:03:39 - INFO - __main__ -   Time: 6.1603166250024515
+03/24/2025 02:03:45 - INFO - __main__ -   Time: 6.417284695999115
+03/24/2025 02:03:51 - INFO - __main__ -   Time: 6.2997208519991545
+03/24/2025 02:03:58 - INFO - __main__ -   Time: 6.440399333998357
+03/24/2025 02:04:05 - INFO - __main__ -   Time: 7.015299384001992
+03/24/2025 02:04:11 - INFO - __main__ -   Time: 6.461221894998744
+03/24/2025 02:04:18 - INFO - __main__ -   Time: 6.3826911020005355
+03/24/2025 02:04:24 - INFO - __main__ -   Time: 6.220654787997773
+03/24/2025 02:04:30 - INFO - __main__ -   Time: 6.114614458001597
+03/24/2025 02:04:36 - INFO - __main__ -   Time: 6.467570095002884
+03/24/2025 02:04:43 - INFO - __main__ -   Time: 6.286768580997887
+03/24/2025 02:04:49 - INFO - __main__ -   Time: 6.144194530999812
+03/24/2025 02:04:55 - INFO - __main__ -   Time: 6.4176062639999145
+03/24/2025 02:05:02 - INFO - __main__ -   Time: 6.214290982999955
+03/24/2025 02:05:08 - INFO - __main__ -   Time: 6.49163658299949
+03/24/2025 02:05:15 - INFO - __main__ -   Time: 6.46525429599933
+03/24/2025 02:05:21 - INFO - __main__ -   Time: 6.663973407001322
+03/24/2025 02:05:27 - INFO - __main__ -   Time: 6.184048684997833
+03/24/2025 02:05:34 - INFO - __main__ -   Time: 6.182246280000982
+03/24/2025 02:05:40 - INFO - __main__ -   Time: 6.187955785000668
+03/24/2025 02:05:46 - INFO - __main__ -   Time: 6.478253207998932
+03/24/2025 02:05:52 - INFO - __main__ -   Time: 6.241566103999503
+03/24/2025 02:05:59 - INFO - __main__ -   Time: 6.781512449997535
+03/24/2025 02:06:06 - INFO - __main__ -   Time: 6.352238474999467
+03/24/2025 02:06:12 - INFO - __main__ -   Time: 6.21826076599973
+03/24/2025 02:06:18 - INFO - __main__ -   Time: 6.177360219000548
+03/24/2025 02:06:24 - INFO - __main__ -   Time: 6.1601555080014805
+03/24/2025 02:06:31 - INFO - __main__ -   Time: 6.339514794999559
+03/24/2025 02:06:37 - INFO - __main__ -   Time: 6.209934690003138
+03/24/2025 02:06:43 - INFO - __main__ -   Time: 6.144186926998373
+03/24/2025 02:06:49 - INFO - __main__ -   Time: 6.207480339999165
+03/24/2025 02:06:55 - INFO - __main__ -   Time: 6.3458593189971
+03/24/2025 02:07:02 - INFO - __main__ -   Time: 6.511691247000272
+03/24/2025 02:07:08 - INFO - __main__ -   Time: 6.445514726998226
+03/24/2025 02:07:15 - INFO - __main__ -   Time: 6.505687918001058
+03/24/2025 02:07:21 - INFO - __main__ -   Time: 6.445485382002516
+03/24/2025 02:07:28 - INFO - __main__ -   Time: 6.295111143001122
+03/24/2025 02:07:34 - INFO - __main__ -   Time: 6.254054631001054
+03/24/2025 02:07:40 - INFO - __main__ -   Time: 6.200994652997906
+03/24/2025 02:07:46 - INFO - __main__ -   Time: 6.237764042998606
+03/24/2025 02:07:53 - INFO - __main__ -   Time: 6.363189687999693
+03/24/2025 02:07:59 - INFO - __main__ -   Time: 6.412717454000813
+03/24/2025 02:08:06 - INFO - __main__ -   Time: 6.471348049999506
+03/24/2025 02:08:12 - INFO - __main__ -   Time: 6.339137414001016
+03/24/2025 02:08:18 - INFO - __main__ -   Time: 6.415764019002381
+03/24/2025 02:08:25 - INFO - __main__ -   Time: 6.415622636999615
+03/24/2025 02:08:31 - INFO - __main__ -   Time: 6.222774425998068
+03/24/2025 02:08:38 - INFO - __main__ -   Time: 6.557007559997146
+03/24/2025 02:08:44 - INFO - __main__ -   Time: 6.1241685380009585
+03/24/2025 02:08:50 - INFO - __main__ -   Time: 6.153947910999705
+03/24/2025 02:08:56 - INFO - __main__ -   Time: 6.319011572999443
+03/24/2025 02:09:02 - INFO - __main__ -   Time: 6.278760918001353
+03/24/2025 02:09:08 - INFO - __main__ -   Time: 6.061843170999055
+03/24/2025 02:09:15 - INFO - __main__ -   Time: 6.079591775000154
+03/24/2025 02:09:21 - INFO - __main__ -   Time: 6.201098138000816
+03/24/2025 02:09:27 - INFO - __main__ -   Time: 6.675566121000884
+03/24/2025 02:09:34 - INFO - __main__ -   Time: 6.165467407001415
+03/24/2025 02:09:40 - INFO - __main__ -   Time: 6.22063188500033
+03/24/2025 02:09:46 - INFO - __main__ -   Time: 6.4146739980023995
+03/24/2025 02:09:53 - INFO - __main__ -   Time: 6.482964757000445
+03/24/2025 02:09:59 - INFO - __main__ -   Time: 6.1724788210012775
+03/24/2025 02:10:05 - INFO - __main__ -   Time: 6.559260354999424
+03/24/2025 02:10:12 - INFO - __main__ -   Time: 6.389873973999784
+03/24/2025 02:10:18 - INFO - __main__ -   Time: 6.271685609000997
+03/24/2025 02:10:24 - INFO - __main__ -   Time: 6.193580843999371
+03/24/2025 02:10:30 - INFO - __main__ -   Time: 6.149943668999185
+03/24/2025 02:10:37 - INFO - __main__ -   Time: 6.5151752780002425
+03/24/2025 02:10:43 - INFO - __main__ -   Time: 6.409945339997648
+03/24/2025 02:10:49 - INFO - __main__ -   Time: 6.0003050599989365
+03/24/2025 02:10:56 - INFO - __main__ -   Time: 6.195501701000467
+03/24/2025 02:11:02 - INFO - __main__ -   Time: 6.031231625998771
+03/24/2025 02:11:08 - INFO - __main__ -   Time: 6.537410109001939
+03/24/2025 02:11:14 - INFO - __main__ -   Time: 6.307646968001791
+03/24/2025 02:11:21 - INFO - __main__ -   Time: 6.236480597999616
+03/24/2025 02:11:27 - INFO - __main__ -   Time: 6.324179439001455
+03/24/2025 02:11:33 - INFO - __main__ -   Time: 6.197998007002752
+03/24/2025 02:11:39 - INFO - __main__ -   Time: 6.236662063998665
+03/24/2025 02:11:46 - INFO - __main__ -   Time: 6.177935937001166
+03/24/2025 02:11:52 - INFO - __main__ -   Time: 6.291038724000828
+03/24/2025 02:11:59 - INFO - __main__ -   Time: 7.044423898998502
+03/24/2025 02:12:06 - INFO - __main__ -   Time: 7.207794129000831
+03/24/2025 02:12:13 - INFO - __main__ -   Time: 6.849629877000552
+03/24/2025 02:12:20 - INFO - __main__ -   Time: 7.199823368999205
+03/24/2025 02:12:27 - INFO - __main__ -   Time: 6.309395664000476
+03/24/2025 02:12:33 - INFO - __main__ -   Time: 6.3320964419981465
+03/24/2025 02:12:39 - INFO - __main__ -   Time: 6.3437459179986035
+03/24/2025 02:12:46 - INFO - __main__ -   Time: 6.386188489999768
+03/24/2025 02:12:52 - INFO - __main__ -   Time: 6.42718751099892
+03/24/2025 02:12:58 - INFO - __main__ -   Time: 6.322288090999791
+03/24/2025 02:13:05 - INFO - __main__ -   Time: 6.3560912259999895
+03/24/2025 02:13:11 - INFO - __main__ -   Time: 6.448198758000217
+03/24/2025 02:13:17 - INFO - __main__ -   Time: 6.095366716999706
+03/24/2025 02:13:23 - INFO - __main__ -   Time: 6.184543626997765
+03/24/2025 02:13:30 - INFO - __main__ -   Time: 6.421580714999436
+03/24/2025 02:13:37 - INFO - __main__ -   Time: 6.834742540999287
+03/24/2025 02:13:43 - INFO - __main__ -   Time: 6.111987665000925
+03/24/2025 02:13:49 - INFO - __main__ -   Time: 6.165828291999787
+03/24/2025 02:13:56 - INFO - __main__ -   Time: 6.498140326002613
+03/24/2025 02:14:02 - INFO - __main__ -   Time: 6.1811879650013
+03/24/2025 02:14:08 - INFO - __main__ -   Time: 6.328108237998094
+03/24/2025 02:14:14 - INFO - __main__ -   Time: 6.091316846999689
+03/24/2025 02:14:20 - INFO - __main__ -   Time: 6.191102859000239
+03/24/2025 02:14:27 - INFO - __main__ -   Time: 6.302790419998928
+03/24/2025 02:14:33 - INFO - __main__ -   Time: 6.1054843599995365
+03/24/2025 02:14:39 - INFO - __main__ -   Time: 6.121944538001117
+03/24/2025 02:14:45 - INFO - __main__ -   Time: 6.057611029998952
+03/24/2025 02:14:51 - INFO - __main__ -   Time: 6.171737618002226
+03/24/2025 02:14:57 - INFO - __main__ -   Time: 6.207141008999315
+03/24/2025 02:15:03 - INFO - __main__ -   Time: 6.033665187998849
+03/24/2025 02:15:09 - INFO - __main__ -   Time: 6.12153912100257
+03/24/2025 02:15:16 - INFO - __main__ -   Time: 6.08881940900028
+03/24/2025 02:15:23 - INFO - __main__ -   Time: 6.980418557999656
+03/24/2025 02:15:30 - INFO - __main__ -   Time: 7.251090311998269
+03/24/2025 02:15:37 - INFO - __main__ -   Time: 6.978538433999347
+03/24/2025 02:15:43 - INFO - __main__ -   Time: 6.344622521999554
+03/24/2025 02:15:49 - INFO - __main__ -   Time: 6.334474882001814
+03/24/2025 02:15:55 - INFO - __main__ -   Time: 5.498014036002132
+03/24/2025 02:15:55 - INFO - __main__ -   Loading features from cached file /proj/cos568proj2-PG0/glue_data/RTE/cached_dev_bert-base-cased_128_rte
+03/24/2025 02:15:55 - INFO - __main__ -   ***** Running evaluation  *****
+03/24/2025 02:15:55 - INFO - __main__ -     Num examples = 277
+03/24/2025 02:15:55 - INFO - __main__ -     Batch size = 8
+03/24/2025 02:15:55 - INFO - __main__ -   loss: 0.648876428604126
+03/24/2025 02:15:56 - INFO - __main__ -   loss: 0.5975875854492188
+03/24/2025 02:15:56 - INFO - __main__ -   loss: 0.5434839725494385
+03/24/2025 02:15:56 - INFO - __main__ -   loss: 0.7045164704322815
+03/24/2025 02:15:57 - INFO - __main__ -   loss: 0.656229555606842
+03/24/2025 02:15:57 - INFO - __main__ -   loss: 0.7119752168655396
+03/24/2025 02:15:57 - INFO - __main__ -   loss: 0.6756011247634888
+03/24/2025 02:15:58 - INFO - __main__ -   loss: 0.6247364282608032
+03/24/2025 02:15:58 - INFO - __main__ -   loss: 0.6288520097732544
+03/24/2025 02:15:58 - INFO - __main__ -   loss: 0.7324084639549255
+03/24/2025 02:15:59 - INFO - __main__ -   loss: 0.6926819086074829
+03/24/2025 02:15:59 - INFO - __main__ -   loss: 0.7393113374710083
+03/24/2025 02:15:59 - INFO - __main__ -   loss: 0.683996856212616
+03/24/2025 02:16:00 - INFO - __main__ -   loss: 0.5617175698280334
+03/24/2025 02:16:00 - INFO - __main__ -   loss: 0.5680902600288391
+03/24/2025 02:16:01 - INFO - __main__ -   loss: 0.8709831237792969
+03/24/2025 02:16:01 - INFO - __main__ -   loss: 0.5157953500747681
+03/24/2025 02:16:01 - INFO - __main__ -   loss: 0.6426916718482971
+03/24/2025 02:16:02 - INFO - __main__ -   loss: 0.6345010995864868
+03/24/2025 02:16:02 - INFO - __main__ -   loss: 0.5147404670715332
+03/24/2025 02:16:02 - INFO - __main__ -   loss: 0.8040615916252136
+03/24/2025 02:16:03 - INFO - __main__ -   loss: 0.6196429133415222
+03/24/2025 02:16:03 - INFO - __main__ -   loss: 0.5846084356307983
+03/24/2025 02:16:03 - INFO - __main__ -   loss: 0.5989298820495605
+03/24/2025 02:16:04 - INFO - __main__ -   loss: 0.6715002655982971
+03/24/2025 02:16:04 - INFO - __main__ -   loss: 0.6554461121559143
+03/24/2025 02:16:04 - INFO - __main__ -   loss: 0.7228294610977173
+03/24/2025 02:16:05 - INFO - __main__ -   loss: 0.6860559582710266
+03/24/2025 02:16:05 - INFO - __main__ -   loss: 0.5000272989273071
+03/24/2025 02:16:05 - INFO - __main__ -   loss: 0.7900958061218262
+03/24/2025 02:16:06 - INFO - __main__ -   loss: 0.7040966153144836
+03/24/2025 02:16:06 - INFO - __main__ -   loss: 0.6535100936889648
+03/24/2025 02:16:06 - INFO - __main__ -   loss: 0.5616484880447388
+03/24/2025 02:16:07 - INFO - __main__ -   loss: 0.5945441126823425
+03/24/2025 02:16:07 - INFO - __main__ -   loss: 0.5760350227355957
